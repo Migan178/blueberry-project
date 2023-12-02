@@ -1,0 +1,13 @@
+{
+  "bot": {
+    "token": "",
+    "krbots_token": ""
+  },
+  "mysql": {
+    "user": "",
+    "password": "",
+    "host": "",
+    "database": "",
+    "port": 3306
+  }
+}
