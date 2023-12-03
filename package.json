@@ -1,6 +1,6 @@
 {
   "name": "blueberry",
-  "version": "1.0.0-1.blueberry",
+  "version": "1.0.0-2.blueberry",
   "private": true,
   "main": "dist/index.js",
   "license": "AGPL-3.0",

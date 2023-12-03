@@ -4,6 +4,7 @@ import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { BlueBerryConfig } from './type.js'
 import { Logger } from '@migan-studio/logger'
+import { BlueberryDatabase } from './modules/index.js'
 import config from '../config.json'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -15,6 +16,7 @@ export default class BlueBerryClient extends DiscommandClient {
   public readonly logger = new Logger({
     name: 'Blueberry',
   })
+  public database = new BlueberryDatabase()
   public constructor() {
     super(
       {
@@ -38,5 +40,6 @@ declare module 'discord.js' {
   interface Client {
     get config(): BlueBerryConfig
     logger: Logger
+    database: BlueberryDatabase
   }
 }
